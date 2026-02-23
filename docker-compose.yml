@@ -9,13 +9,13 @@ services:
       - mongo-data:/data/db
 
   backend:
-    build: ./backend
+    image: arfeen3421/backend:latest
     container_name: backend
     depends_on:
       - mongodb
 
   frontend:
-    build: ./frontend
+    image: arfeen3421/frontend:latest
     container_name: frontend
 
   nginx:
